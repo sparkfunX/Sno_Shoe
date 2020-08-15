@@ -4563,10 +4563,6 @@ Source:
 <smd name="17" x="-3.5" y="5.235" dx="2.6" dy="0.3" layer="1" rot="R90" cream="no"/>
 <smd name="18" x="-4" y="5.235" dx="2.6" dy="0.3" layer="1" rot="R90" cream="no"/>
 <smd name="19" x="-4.5" y="5.235" dx="2.6" dy="0.3" layer="1" rot="R90" cream="no"/>
-<pad name="MH1" x="-7.25" y="4.475" drill="3" diameter="4.275"/>
-<pad name="MH2" x="7.25" y="4.475" drill="3" diameter="4.275"/>
-<pad name="MH3" x="-7.25" y="-1.485" drill="2" diameter="2.88"/>
-<pad name="MH4" x="7.25" y="-1.485" drill="2" diameter="2.88"/>
 <text x="0" y="0.512" size="1.27" layer="25" align="center">&gt;NAME</text>
 <text x="0" y="-2.028" size="1.27" layer="27" align="center">&gt;VALUE</text>
 <wire x1="-7.5" y1="6.075" x2="7.5" y2="6.075" width="0.2" layer="51"/>
@@ -4596,6 +4592,14 @@ Source:
 <rectangle x1="-3.625" y1="4.035" x2="-3.375" y2="6.435" layer="31"/>
 <rectangle x1="-4.125" y1="4.035" x2="-3.875" y2="6.435" layer="31"/>
 <rectangle x1="-4.625" y1="4.035" x2="-4.375" y2="6.435" layer="31"/>
+<pad name="MH3" x="-7.25" y="-1.485" drill="1" shape="long" rot="R90"/>
+<wire x1="-7.25" y1="-1.985" x2="-7.25" y2="-0.985" width="1" layer="46"/>
+<wire x1="7.25" y1="-1.985" x2="7.25" y2="-0.985" width="1" layer="46"/>
+<pad name="MH4" x="7.25" y="-1.485" drill="1" shape="long" rot="R90"/>
+<pad name="MH1" x="-7.25" y="4.475" drill="1" diameter="1.875" shape="long" rot="R90"/>
+<wire x1="-7.25" y1="3.475" x2="-7.25" y2="5.475" width="1" layer="46"/>
+<pad name="MH2" x="7.25" y="4.475" drill="1" diameter="1.875" shape="long" rot="R90"/>
+<wire x1="7.25" y1="3.475" x2="7.25" y2="5.475" width="1" layer="46"/>
 </package>
 </packages>
 <symbols>
@@ -9129,7 +9133,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
-<class number="1" name="Power" width="0.4572" drill="0">
+<class number="1" name="Power" width="0.4064" drill="0">
 </class>
 </classes>
 <parts>
@@ -9197,6 +9201,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="MINI" value="OSHW-LOGOMINI"/>
 <part name="SPARKX2" library="SparkX" deviceset="SPARKX-LOGO" device="4"/>
+<part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9209,11 +9214,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="162.56" y1="0" x2="162.56" y2="127" width="0.2032" layer="97" style="longdash"/>
 <wire x1="304.8" y1="71.12" x2="0" y2="71.12" width="0.2032" layer="97" style="longdash"/>
 <text x="236.474" y="154.686" size="2.54" layer="94" font="vector" align="center">Alorium Technology Sno (Footprint)</text>
-<text x="373.634" y="167.386" size="2.54" layer="94" font="vector" align="center">HDMI Connector</text>
+<text x="371.094" y="167.386" size="2.54" layer="94" font="vector" align="center">HDMI Connector</text>
 <text x="81.534" y="88.646" size="2.54" layer="94" font="vector" align="center">Reset Button</text>
 <text x="81.534" y="12.446" size="2.54" layer="94" font="vector" align="center">Qwiic I2C</text>
 <text x="236.474" y="81.026" size="2.54" layer="94" font="vector" align="center">Decoupling</text>
 <text x="350.52" y="8.128" size="3.81" layer="94">Paul Clark</text>
+<text x="420.624" y="6.35" size="3.81" layer="94">X01</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
@@ -9424,6 +9430,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </instance>
 <instance part="LOGO2" gate="G$1" x="309.88" y="15.24" smashed="yes"/>
 <instance part="SPARKX2" gate="G$1" x="309.88" y="27.94" smashed="yes"/>
+<instance part="SUPPLY1" gate="G$1" x="218.44" y="251.46" smashed="yes">
+<attribute name="VALUE" x="218.44" y="254.254" size="1.778" layer="96" font="vector" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -9470,6 +9479,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$1" gate="G$1" pin="GND@54"/>
 <wire x1="215.9" y1="236.22" x2="215.9" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="236.22" x2="215.9" y2="236.22" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="GND@55"/>
+<wire x1="220.98" y1="238.76" x2="215.9" y2="238.76" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="238.76" x2="215.9" y2="236.22" width="0.1524" layer="91"/>
+<junction x="215.9" y="236.22"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND@30"/>
@@ -9600,6 +9613,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="U$1" gate="G$1" pin="3.3V@28"/>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 <wire x1="251.46" y1="193.04" x2="256.54" y2="193.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="3.3V@56"/>
+<wire x1="220.98" y1="241.3" x2="218.44" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
+<wire x1="218.44" y1="241.3" x2="218.44" y2="251.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TXO" class="0">
