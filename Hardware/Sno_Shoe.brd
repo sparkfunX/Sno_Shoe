@@ -191,7 +191,7 @@
 <dimension x1="0" y1="0" x2="0" y2="57.15" x3="-3.80999375" y3="28.575" textsize="1.778" textratio="15" layer="47" dtype="vertical" unit="inch"/>
 <text x="25.4" y="38.1" size="1.778" layer="51" font="vector" ratio="15">2-layer board</text>
 <text x="25.4" y="35.56" size="1.778" layer="51" font="vector" ratio="15">1.6mm thickness</text>
-<text x="25.4" y="33.02" size="1.778" layer="51" font="vector" ratio="15">ENIG finish</text>
+<text x="25.4" y="33.02" size="1.778" layer="51" font="vector" ratio="15">HASL finish</text>
 <text x="76.2" y="54.61" size="1.778" layer="51" font="vector" ratio="15">Paul Clark</text>
 <wire x1="0" y1="0" x2="17.78" y2="0" width="0.2032" layer="20"/>
 <wire x1="17.78" y1="0" x2="17.78" y2="57.15" width="0.2032" layer="20"/>
@@ -541,9 +541,6 @@ Source:
 <wire x1="7.5" y1="6.075" x2="7.5" y2="-6.075" width="0.2" layer="51"/>
 <wire x1="7.5" y1="-6.075" x2="-7.5" y2="-6.075" width="0.2" layer="51"/>
 <wire x1="-7.5" y1="-6.075" x2="-7.5" y2="6.075" width="0.2" layer="51"/>
-<wire x1="-7.5" y1="-3.5" x2="-7.5" y2="-6.075" width="0.1" layer="21"/>
-<wire x1="-7.5" y1="-6.075" x2="7.5" y2="-6.075" width="0.1" layer="21"/>
-<wire x1="7.5" y1="-6.075" x2="7.5" y2="-3.5" width="0.1" layer="21"/>
 <circle x="5.461" y="6.858" radius="0.2032" width="0.4064" layer="21"/>
 <rectangle x1="-0.125" y1="4.035" x2="0.125" y2="6.435" layer="31"/>
 <rectangle x1="0.875" y1="4.035" x2="1.125" y2="6.435" layer="31"/>
@@ -572,6 +569,10 @@ Source:
 <wire x1="-7.25" y1="3.475" x2="-7.25" y2="5.475" width="1" layer="46"/>
 <pad name="MH2" x="7.25" y="4.475" drill="1" diameter="1.875" shape="long" rot="R90"/>
 <wire x1="7.25" y1="3.475" x2="7.25" y2="5.475" width="1" layer="46"/>
+<wire x1="-7.25" y1="3.475" x2="-7.25" y2="5.475" width="1.5" layer="31"/>
+<wire x1="7.25" y1="3.475" x2="7.25" y2="5.475" width="1.5" layer="31"/>
+<wire x1="-7.25" y1="-1.985" x2="-7.25" y2="-0.985" width="1.5" layer="31"/>
+<wire x1="7.25" y1="-1.985" x2="7.25" y2="-0.985" width="1.5" layer="31"/>
 </package>
 </packages>
 </library>
