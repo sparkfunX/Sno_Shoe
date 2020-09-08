@@ -1,6 +1,6 @@
 # Snō Shoe
 
-A Qwiic, USB-C and HDMI breakout board for the [Alorium Technology Snō](https://www.aloriumtech.com/sno/)
+A Qwiic, USB-C and HDMI breakout board for the [Alorium Technology Snō](https://www.sparkfun.com/products/15145)
 
 ![Top.JPG](img/Top.JPG)
 ![Bottom.JPG](img/Bottom.JPG)
@@ -23,4 +23,4 @@ Arduino-programmable Serial & Qwiic VGA Adapter.
 ## Repository Contents
 
 - **/Hardware** - Eagle PCB, SCH and LBR design files
-- **LICENSE.md** contains the licence information
+- **[LICENSE.md](./LICENSE.md)** contains the licence information
